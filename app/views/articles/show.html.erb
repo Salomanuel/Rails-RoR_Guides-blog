@@ -11,3 +11,9 @@
 
 	<%= f.submit %>
 <% end %>
+
+
+	<% @article.comments.each do |comment| %>
+		<h4><%= comment.commenter %> wrote:</h4>
+		<p><%= comment.body %></p>
+	<% end %>
